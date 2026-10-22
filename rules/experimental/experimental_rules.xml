@@ -1,0 +1,57 @@
+<!--
+Experimental Wazuh rules
+These rules were tested during the Detection Engineering Lab but were not
+kept in the production ruleset because of live-processing limitations,
+endpoint blocking, or excessive noise.
+-->
+
+<group name="experimental,">
+
+  <!-- Scheduled Task registration -->
+  <rule id="100101" level="9">
+    <field name="win.system.providerName">Microsoft-Windows-TaskScheduler</field>
+    <field name="win.system.eventID">^106$</field>
+    <field name="win.eventdata.userContext" type="pcre2">(?i)^(?!.*\\(?:SYSTEM|LOCAL SERVICE|NETWORK SERVICE)$).+</field>
+    <description>Scheduled task registered by a non-system user</description>
+    <mitre>
+      <id>T1053.005</id>
+    </mitre>
+    <group>scheduled_task,persistence,suspicious_execution,</group>
+  </rule>
+
+  <!-- Microsoft Defender Tamper Protection -->
+  <rule id="100103" level="10">
+    <field name="win.system.providerName">Microsoft-Windows-Windows Defender</field>
+    <field name="win.system.eventID">^5013$</field>
+    <description>Microsoft Defender Tamper Protection blocked a configuration change</description>
+    <mitre>
+      <id>T1562.001</id>
+    </mitre>
+    <group>defender,tamper_protection,defense_evasion,</group>
+  </rule>
+
+  <!-- Registry Run Key persistence -->
+  <rule id="100105" level="10">
+    <if_group>sysmon_event_13</if_group>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\powershell\.exe$</field>
+    <field name="win.eventdata.targetObject" type="pcre2">(?i)\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\[^\\]+$</field>
+    <description>PowerShell modified Registry Run key for persistence</description>
+    <mitre>
+      <id>T1547.001</id>
+    </mitre>
+    <group>registry,persistence,run_key,powershell,suspicious_execution,</group>
+  </rule>
+
+  <!-- Certutil remote retrieval attempt -->
+  <rule id="100107" level="10">
+    <if_group>sysmon_event1</if_group>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\certutil\.exe$</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)(-urlcache|-verifyctl).*(https?://)</field>
+    <description>Certutil used to retrieve content from a remote URL</description>
+    <mitre>
+      <id>T1105</id>
+    </mitre>
+    <group>certutil,lolbin,network_activity,suspicious_execution,</group>
+  </rule>
+
+</group>

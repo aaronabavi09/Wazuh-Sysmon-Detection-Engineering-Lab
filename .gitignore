@@ -1,0 +1,58 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets / credentials
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*.cer
+
+# Wazuh / lab runtime artifacts
+archives.json
+alerts.json
+*.evtx
+
+# VMware / virtualization files
+*.vmdk
+*.vmem
+*.vmss
+*.vmsn
+*.nvram
+*.lck/
+
+# Packet captures unless intentionally sanitized
+*.pcap
+*.pcapng
+
+# Local notes / scratch files
+notes-private/
+scratch/
