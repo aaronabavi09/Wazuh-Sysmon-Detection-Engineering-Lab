@@ -1,4 +1,4 @@
-# Scenario 08 — Registry Run Key Persistence
+# Scenario 08 - Registry Run Key Persistence
 
 ## Objective
 
@@ -6,7 +6,7 @@ Detect persistence through a Windows Registry `Run` key.
 
 ## Data Source
 
-- Sysmon Event ID 13 — Registry value set
+- Sysmon Event ID 13 - Registry value set
 
 ## Test
 
@@ -25,7 +25,7 @@ Sysmon successfully recorded the registry modification.
 
 - **Rule ID:** `100105`
 - **Severity Level:** `10`
-- **MITRE ATT&CK:** `T1547.001` — Registry Run Keys / Startup Folder
+- **MITRE ATT&CK:** `T1547.001` - Registry Run Keys / Startup Folder
 
 ## Tuning
 
@@ -33,7 +33,7 @@ An early version was too broad and produced excessive noise. Additional process 
 
 ## Result
 
-⚠️ **Sysmon telemetry was observed, but the custom rule was not retained as a production live detection.**
+ **Sysmon telemetry was observed, but the custom rule was not retained as a production live detection.**
 
 ## Detection Engineering Takeaway
 

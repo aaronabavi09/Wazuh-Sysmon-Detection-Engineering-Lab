@@ -1,4 +1,4 @@
-# Scenario 01 — Encoded PowerShell
+# Scenario 01 - Encoded PowerShell
 
 ## Objective
 
@@ -6,7 +6,7 @@ Validate whether Wazuh natively detects PowerShell launched with an encoded comm
 
 ## Data Source
 
-- Sysmon Event ID 1 — Process creation
+- Sysmon Event ID 1 - Process creation
 - Wazuh Windows/Sysmon ruleset
 
 ## Test
@@ -30,11 +30,11 @@ Wazuh detected the behavior using a native rule.
 - **Wazuh Rule ID:** `92057`
 - **Severity Level:** `12`
 - **Description:** PowerShell spawned a PowerShell process which executed a Base64 encoded command
-- **MITRE ATT&CK:** `T1059.001` — PowerShell
+- **MITRE ATT&CK:** `T1059.001` - PowerShell
 
 ## Result
 
-✅ **Detected live using a native Wazuh rule.**
+ **Detected live using a native Wazuh rule.**
 
 No custom rule was retained because native coverage was already strong and creating a duplicate rule would add unnecessary noise.
 

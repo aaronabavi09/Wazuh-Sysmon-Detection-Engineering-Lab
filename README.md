@@ -45,8 +45,8 @@ This lab was designed to practice a realistic detection-engineering workflow:
 
 The environment contains:
 
-- **Windows 11 endpoint** — monitored workstation
-- **Sysmon** — endpoint telemetry
+- **Windows 11 endpoint** - monitored workstation
+- **Sysmon** - endpoint telemetry
 - **Wazuh Agent 4.8.2**
 - **Wazuh Manager 4.8.2**
 - **Wazuh Indexer**
@@ -122,11 +122,53 @@ Detection summary:
 
 ---
 
+## Visual Evidence
+
+Below are representative screenshots from the lab. Full evidence is available in the individual scenario documentation.
+
+### Encoded PowerShell - Native Wazuh Rule 92057
+
+![Encoded PowerShell Wazuh Alert](screenshots/scenario-01/01-wazuh-native-alert-92057.png)
+
+---
+
+### WScript → PowerShell - Custom Rule 100100
+
+![WScript PowerShell Wazuh Alert](screenshots/scenario-03/01-wazuh-alert-100100.png)
+
+---
+
+### Hidden PowerShell - Custom Rule 100102
+
+![Hidden PowerShell Wazuh Alert](screenshots/scenario-05/01-wazuh-alert-100102.png)
+
+---
+
+### PowerShell Web Download - Custom Rule 100104
+
+![PowerShell Web Download Wazuh Alert](screenshots/scenario-07/01-wazuh-alert-100104.png)
+
+---
+
+### MSHTA with Remote URL - Custom Rule 100106
+
+![MSHTA Remote URL Wazuh Alert](screenshots/scenario-09/01-wazuh-alert-100106.png)
+
+---
+
+### Microsoft Defender Tamper Protection - Event ID 5013
+
+![Defender Tamper Protection Event 5013](screenshots/scenario-06/01-defender-event-5013-eventviewer.png)
+
+For complete telemetry, rule logic, test commands, and troubleshooting notes, see the [`scenarios/`](scenarios/) directory.
+
+---
+
 ## Production Custom Rules
 
 The following custom detections were successfully validated in the live Wazuh pipeline:
 
-### Rule 100100 — PowerShell launched by Windows Script Host
+### Rule 100100 - PowerShell launched by Windows Script Host
 
 Detects:
 
@@ -138,12 +180,12 @@ powershell.exe
 
 MITRE ATT&CK:
 
-- `T1059.001` — PowerShell
-- `T1059.005` — Visual Basic
+- `T1059.001` - PowerShell
+- `T1059.005` - Visual Basic
 
 ---
 
-### Rule 100102 — Hidden PowerShell
+### Rule 100102 - Hidden PowerShell
 
 Detects PowerShell launched with arguments such as:
 
@@ -153,12 +195,12 @@ Detects PowerShell launched with arguments such as:
 
 MITRE ATT&CK:
 
-- `T1059.001` — PowerShell
-- `T1564.003` — Hidden Window
+- `T1059.001` - PowerShell
+- `T1564.003` - Hidden Window
 
 ---
 
-### Rule 100104 — PowerShell Web Download Command
+### Rule 100104 - PowerShell Web Download Command
 
 Detects PowerShell processes launched with commands such as:
 
@@ -171,12 +213,12 @@ curl
 
 MITRE ATT&CK:
 
-- `T1059.001` — PowerShell
-- `T1105` — Ingress Tool Transfer
+- `T1059.001` - PowerShell
+- `T1105` - Ingress Tool Transfer
 
 ---
 
-### Rule 100106 — MSHTA with Remote URL
+### Rule 100106 - MSHTA with Remote URL
 
 Detects:
 
@@ -186,7 +228,7 @@ mshta.exe https://...
 
 MITRE ATT&CK:
 
-- `T1218.005` — Mshta
+- `T1218.005` - Mshta
 
 ---
 
@@ -220,9 +262,9 @@ The lab used several Windows telemetry sources.
 
 Key events included:
 
-- **Event ID 1** — Process creation
-- **Event ID 13** — Registry value set
-- **Event ID 22** — DNS query
+- **Event ID 1** - Process creation
+- **Event ID 13** - Registry value set
+- **Event ID 22** - DNS query
 
 ### Windows Security
 
@@ -230,7 +272,7 @@ Used for account and local group activity.
 
 Example:
 
-- **Event ID 4732** — Member added to a security-enabled local group
+- **Event ID 4732** - Member added to a security-enabled local group
 
 ### Task Scheduler Operational
 
@@ -238,7 +280,7 @@ Used to inspect scheduled-task registration and execution.
 
 Example:
 
-- **Event ID 106** — Scheduled task registered
+- **Event ID 106** - Scheduled task registered
 
 ### Microsoft Defender Operational
 
@@ -246,7 +288,7 @@ Used to observe Defender configuration protection.
 
 Example:
 
-- **Event ID 5013** — Tamper Protection blocked a configuration change
+- **Event ID 5013** - Tamper Protection blocked a configuration change
 
 ---
 

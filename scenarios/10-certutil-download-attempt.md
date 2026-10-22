@@ -1,4 +1,4 @@
-# Scenario 10 — Certutil Remote Download Attempt
+# Scenario 10 - Certutil Remote Download Attempt
 
 ## Objective
 
@@ -6,13 +6,13 @@ Evaluate detection of `certutil.exe` used for remote content retrieval.
 
 ## Data Source
 
-- Intended source: Sysmon Event ID 1 — Process creation
+- Intended source: Sysmon Event ID 1 - Process creation
 
 ## Experimental Rule
 
 - **Rule ID:** `100107`
 - **Severity Level:** `10`
-- **MITRE ATT&CK:** `T1105` — Ingress Tool Transfer
+- **MITRE ATT&CK:** `T1105` - Ingress Tool Transfer
 
 ## Test
 
@@ -30,7 +30,7 @@ Sysmon confirmed process creation only for the plain `certutil.exe` execution, n
 
 ## Result
 
-🛡️ **The endpoint blocked the remote retrieval attempt before the expected Sysmon process telemetry was generated.**
+ **The endpoint blocked the remote retrieval attempt before the expected Sysmon process telemetry was generated.**
 
 The custom rule therefore could not be validated live and remained experimental.
 

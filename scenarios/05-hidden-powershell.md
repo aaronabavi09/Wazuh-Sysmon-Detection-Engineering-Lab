@@ -1,4 +1,4 @@
-# Scenario 05 — Hidden PowerShell Window
+# Scenario 05 - Hidden PowerShell Window
 
 ## Objective
 
@@ -6,15 +6,15 @@ Detect PowerShell launched with a hidden window.
 
 ## Data Source
 
-- Sysmon Event ID 1 — Process creation
+- Sysmon Event ID 1 - Process creation
 
 ## Custom Rule
 
 - **Rule ID:** `100102`
 - **Severity Level:** `9`
 - **MITRE ATT&CK:**
-  - `T1059.001` — PowerShell
-  - `T1564.003` — Hidden Window
+  - `T1059.001` - PowerShell
+  - `T1564.003` - Hidden Window
 
 ```xml
 <rule id="100102" level="9">
@@ -38,7 +38,7 @@ powershell.exe -WindowStyle Hidden -NoProfile -Command "Start-Sleep -Seconds 3"
 
 ## Result
 
-✅ **Custom rule detected live.**
+ **Custom rule detected live.**
 
 ## Detection Engineering Takeaway
 

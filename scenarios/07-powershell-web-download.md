@@ -1,4 +1,4 @@
-# Scenario 07 — PowerShell Web Download Command
+# Scenario 07 - PowerShell Web Download Command
 
 ## Objective
 
@@ -6,15 +6,15 @@ Detect a newly created PowerShell process containing a web-download command.
 
 ## Data Source
 
-- Sysmon Event ID 1 — Process creation
+- Sysmon Event ID 1 - Process creation
 
 ## Custom Rule
 
 - **Rule ID:** `100104`
 - **Severity Level:** `10`
 - **MITRE ATT&CK:**
-  - `T1059.001` — PowerShell
-  - `T1105` — Ingress Tool Transfer
+  - `T1059.001` - PowerShell
+  - `T1105` - Ingress Tool Transfer
 
 ```xml
 <rule id="100104" level="10">
@@ -38,7 +38,7 @@ powershell.exe -NoProfile -Command "Invoke-WebRequest 'https://example.com' -Use
 
 ## Result
 
-✅ **Custom rule detected live.**
+ **Custom rule detected live.**
 
 ## Detection Engineering Takeaway
 

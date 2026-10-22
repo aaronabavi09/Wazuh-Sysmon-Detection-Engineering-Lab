@@ -55,7 +55,7 @@ The corresponding Wazuh Agent configuration block was:
 
 ## Key Sysmon Events Used
 
-### Event ID 1 — Process Create
+### Event ID 1 - Process Create
 
 This was the most important event source for the project.
 
@@ -80,7 +80,7 @@ It supported detections such as:
 
 ---
 
-### Event ID 13 — Registry Value Set
+### Event ID 13 - Registry Value Set
 
 Used during the Registry Run Key persistence scenario.
 
@@ -99,7 +99,7 @@ HKCU\Software\Microsoft\Windows\CurrentVersion\Run
 
 ---
 
-### Event ID 22 — DNS Query
+### Event ID 22 - DNS Query
 
 Used during initial telemetry validation.
 

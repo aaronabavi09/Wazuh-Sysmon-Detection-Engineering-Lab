@@ -1,4 +1,4 @@
-# Scenario 02 — Local Administrators Group Modification
+# Scenario 02 - Local Administrators Group Modification
 
 ## Objective
 
@@ -31,7 +31,7 @@ Wazuh generated a native alert.
 
 ## Result
 
-✅ **Detected live using a native Wazuh rule.**
+ **Detected live using a native Wazuh rule.**
 
 ## Cleanup
 

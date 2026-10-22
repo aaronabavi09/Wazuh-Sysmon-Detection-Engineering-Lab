@@ -1,4 +1,4 @@
-# Scenario 03 — PowerShell Spawned by Windows Script Host
+# Scenario 03 - PowerShell Spawned by Windows Script Host
 
 ## Objective
 
@@ -6,15 +6,15 @@ Detect PowerShell launched by `wscript.exe`, an unusual parent-child process rel
 
 ## Data Source
 
-- Sysmon Event ID 1 — Process creation
+- Sysmon Event ID 1 - Process creation
 
 ## Custom Rule
 
 - **Rule ID:** `100100`
 - **Severity Level:** `10`
 - **MITRE ATT&CK:**
-  - `T1059.001` — PowerShell
-  - `T1059.005` — Visual Basic
+  - `T1059.001` - PowerShell
+  - `T1059.005` - Visual Basic
 
 ```xml
 <rule id="100100" level="10">
@@ -47,7 +47,7 @@ wscript.exe C:\Users\Public\wscript-powershell-test.vbs
 
 ## Result
 
-✅ **Custom rule detected live in Wazuh Threat Hunting.**
+ **Custom rule detected live in Wazuh Threat Hunting.**
 
 The alert showed:
 

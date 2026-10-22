@@ -30,10 +30,10 @@ The most successful custom rules in the lab were based on Sysmon Process Create 
 
 Validated examples included:
 
-- `100100` — PowerShell launched by Windows Script Host
-- `100102` — PowerShell launched with a hidden window
-- `100104` — PowerShell launched with a web download command
-- `100106` — MSHTA launched with a remote URL
+- `100100` - PowerShell launched by Windows Script Host
+- `100102` - PowerShell launched with a hidden window
+- `100104` - PowerShell launched with a web download command
+- `100106` - MSHTA launched with a remote URL
 
 Sysmon Event ID 1 provided useful fields such as:
 

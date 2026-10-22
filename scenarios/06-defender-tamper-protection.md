@@ -1,4 +1,4 @@
-# Scenario 06 — Microsoft Defender Tamper Protection
+# Scenario 06 - Microsoft Defender Tamper Protection
 
 ## Objective
 
@@ -28,11 +28,11 @@ Windows Defender generated Event ID `5013`:
 
 - **Rule ID:** `100103`
 - **Severity Level:** `10`
-- **MITRE ATT&CK:** `T1562.001` — Impair Defenses
+- **MITRE ATT&CK:** `T1562.001` - Impair Defenses
 
 ## Result
 
-⚠️ **Event ID 5013 was successfully collected by Wazuh, but the custom rule did not generate a live alert.**
+ **Event ID 5013 was successfully collected by Wazuh, but the custom rule did not generate a live alert.**
 
 The rule was retained as experimental.
 

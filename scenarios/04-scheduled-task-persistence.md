@@ -1,4 +1,4 @@
-# Scenario 04 — Scheduled Task Persistence
+# Scenario 04 - Scheduled Task Persistence
 
 ## Objective
 
@@ -28,7 +28,7 @@ Register-ScheduledTask `
 
 - **Rule ID:** `100101`
 - **Severity Level:** `9`
-- **MITRE ATT&CK:** `T1053.005` — Scheduled Task
+- **MITRE ATT&CK:** `T1053.005` - Scheduled Task
 
 ## Validation
 
@@ -36,7 +36,7 @@ The raw Event ID `106` was successfully collected in Wazuh archives and the real
 
 ## Result
 
-⚠️ **Offline rule validation succeeded, but no live alert was generated.**
+ **Offline rule validation succeeded, but no live alert was generated.**
 
 The rule was therefore moved to the experimental ruleset.
 

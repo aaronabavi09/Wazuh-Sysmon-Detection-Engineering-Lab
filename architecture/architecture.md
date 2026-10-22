@@ -51,9 +51,9 @@ Sysmon provides detailed endpoint telemetry beyond standard Windows logging.
 
 The lab primarily relied on:
 
-- **Event ID 1** — Process creation
-- **Event ID 13** — Registry value set
-- **Event ID 22** — DNS query
+- **Event ID 1** - Process creation
+- **Event ID 13** - Registry value set
+- **Event ID 22** - DNS query
 
 Useful fields included:
 

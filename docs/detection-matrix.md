@@ -21,15 +21,15 @@ This matrix summarizes the detection scenarios implemented and evaluated in the 
 
 The following custom detections were validated successfully in the live Wazuh pipeline:
 
-- `100100` — PowerShell launched by Windows Script Host
-- `100102` — PowerShell launched with hidden window
-- `100104` — PowerShell launched with web download command
-- `100106` — MSHTA launched with remote URL
+- `100100` - PowerShell launched by Windows Script Host
+- `100102` - PowerShell launched with hidden window
+- `100104` - PowerShell launched with web download command
+- `100106` - MSHTA launched with remote URL
 
 ### Native Wazuh detections validated
 
-- Encoded PowerShell execution — Rule `92057`
-- Local Administrators group modification — Rule `60154`
+- Encoded PowerShell execution - Rule `92057`
+- Local Administrators group modification - Rule `60154`
 
 ### Experimental / research outcomes
 

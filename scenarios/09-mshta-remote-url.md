@@ -1,4 +1,4 @@
-# Scenario 09 — MSHTA Launched with Remote URL
+# Scenario 09 - MSHTA Launched with Remote URL
 
 ## Objective
 
@@ -6,13 +6,13 @@ Detect `mshta.exe` launched with an HTTP/HTTPS URL.
 
 ## Data Source
 
-- Sysmon Event ID 1 — Process creation
+- Sysmon Event ID 1 - Process creation
 
 ## Custom Rule
 
 - **Rule ID:** `100106`
 - **Severity Level:** `10`
-- **MITRE ATT&CK:** `T1218.005` — Mshta
+- **MITRE ATT&CK:** `T1218.005` - Mshta
 
 ```xml
 <rule id="100106" level="10">
@@ -35,7 +35,7 @@ mshta.exe https://example.com
 
 ## Result
 
-✅ **Custom rule detected live.**
+ **Custom rule detected live.**
 
 ## Detection Engineering Takeaway
 
